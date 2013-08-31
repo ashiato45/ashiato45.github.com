@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <title>FLOW</title>
+    <!--[if IE]><script type="text/javascript" src="excanvas_r3/excanvas.js"></script><![endif]-->
+    <script src="http://cdn.peerjs.com/0/peer.js"></script>
+    <script type="text/javascript" src="net.js"></script>
+    <script type="text/javascript" src="image.js"></script>
+    <script type="text/javascript" src="sprite.js"></script>
+    <script type="text/javascript" src="perlin.js"></script>
+    <script type="text/javascript" src="bomb.js"></script>
+    <script type="text/javascript" src="ship.js"></script>
+    <script type="text/javascript" src="keyboard.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+</script>
+  </head>
+  <body>
+    <h1>FLOW</h1>
+    <div align="center">
+      スペースで始める前に入力してください
+      <form name="mainform">
+        相手の名前：<input type="text" name="input_foe">
+        自分の名前：<input type="text" name="input_mine" readonly="readonly">
+      </form>
+    </div>
+    <div align="center">
+      <canvas id="canvasMain" width="640" height="480" onload="draw()"></canvas>
+    </div>
+    <table><tbody>
+      <tr>
+        <td>かんたん説明</td>
+        <td>左に舵を切る</td>
+        <td>右に舵を切る</td>
+        <td>発射方向を変える</td>
+        <td>機雷を発射</td>
+      </tr>
+      <tr>
+        <td>1P(赤)</td>
+        <td>←,A</td>
+        <td>→,D</td>
+        <td>↑,W</td>
+        <td>↓,S</td>
+      </tr>
+    </tbody></table>
+    
+  </body>
+</html>

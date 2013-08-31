@@ -1,0 +1,313 @@
+\documentclass[b5paper]{jbook}
+\usepackage[dviout]{graphicx}
+\usepackage{type1cm}
+\usepackage{amsmath,amssymb}
+\usepackage{okumacro}
+\usepackage{color}
+\usepackage{jumoline}
+%\usepackage{enumerate}
+
+\setlength{\UnderlineDepth}{2.5pt}
+
+\newcommand{\tab}{\hspace{2zw}}
+
+\newcommand{\TopCircle}[1]{\hfill \MARU{#1}}
+
+\newcommand{\egg}[1]{%
+	\newdimen\mytempdima
+	\setbox0\hbox{\fontfamily{phv}\fontsize{9pt}{0}\selectfont#1\/}%
+	\mytempdima\ht0
+	\advance\mytempdima-5.7pt
+	\advance\mytempdima-\dp0
+	\divide\mytempdima 2\relax
+	\makebox[1.5zw]{\ooalign{\lower0.35zw\hbox{%
+		\includegraphics[bb=0 0 34 46,scale=0.263]{oval.eps}}\crcr
+		\hfil\lower\mytempdima\box0\hfil}}}
+
+
+\newenvironment{SubjectName}{\huge }{}
+\newenvironment{BigSubjectName}{\begin{center}\Huge }{\end{center}}
+
+\newcommand{\f}[1]{\thicklines\framebox[1cm]{\textgt{\small #1}}}
+
+\newcommand{\UnderMark}[1]
+{\leavevmode\lower0.6zw \hbox{\small #1} \hspace{-0.7zw}}
+
+\newcommand{\MarkedUnderline}[2]{\UnderMark{#1} \Underline{#2}}
+
+\setlength{\topmargin}{-10.4truemm}
+\setlength{\oddsidemargin}{-5.4truemm}
+\setlength{\evensidemargin}{-5.4truemm}
+\setlength{\textwidth}{400pt}
+\setlength{\textheight}{37\baselineskip}
+\addtolength{\textheight}{\topskip}
+
+\renewcommand{\labelenumi}{\textgt{\theenumi .}}
+\renewcommand{\theenumi}{\arabic{enumi}}
+\renewcommand{\labelenumii}{\textgt{\theenumii}}
+\renewcommand{\theenumii}{\arabic{enumii}}
+\renewcommand{\labelenumiii}{\textgt{\MARU{\theenumiii}}}
+\renewcommand{\theenumiii}{\Roman{enumiii}}
+
+\begin{document}
+\pagestyle{plain}
+\TopCircle{D}
+
+\vspace{2zw}
+\begin{SubjectName}\textgt{\kintou{6zw}{同人技術}}\end{SubjectName}
+\hfill{}
+$\begin{pmatrix}
+60\mbox{点} \\
+30\mbox{分}
+\end{pmatrix}$
+
+\renewcommand{\labelenumi}{\textgt{\theenumi}}
+\renewcommand{\labelenumi}{\Roman{enumi}}
+\renewcommand{\labelenumii}{\arabic{enumii}}
+\renewcommand{\labelenumiii}{\textgt{\MARU{\theenumiii}}}
+\renewcommand{\labelenumiii}{\Roman{enumiii}}
+\begin{enumerate}
+\item 注意事項
+	\begin{enumerate}
+	\item 試験開始の合図があるまで, この問題冊子の中を見てはいけません。
+	\item 問題は第1問～第3問の3題あり, すべて必須問題です。
+	\item 試験中に問題冊子の不鮮明, ページの落丁・乱丁及び解答用紙の汚れ等に気づいた場合は, 手を挙げて監督者に知らせなさい。
+	\item この冊子は同人技術の問題です。同人グラフィック, 同人音楽を選択したのにこの冊子が届いているものは, 手を挙げて監督者に知らせなさい。
+	\item 解答用紙には解答欄以外に次の記入欄があるので, 監督者の指示に従って, それぞれ正しく記入し, マークしなさい。
+		\begin{enumerate}
+		\item[\MARU{1}] 受験番号欄 \\
+			受験番号（数字及び英字）を記入し, さらにその下のマーク欄にマークしなさい。正しくマークされていない場合は, 採点できないことがあります。
+		\item[\MARU{2}] 氏名欄, 試験場コード欄 \\
+			氏名・フリガナ及び試験場コード（数字）を記入しなさい。
+		\end{enumerate}
+	\item 問題冊子の余白等は適宜利用してよいが, どのページも切り離してはいけません。
+	\item 試験終了後, 問題冊子は持ち帰りなさい。
+	\end{enumerate}
+\item 解答上の注意
+	\begin{enumerate}
+	\item 問題中のプログラムは, とくに指定のない限りC++言語によって書かれ, 規格は JIS~X~3014:2003『プログラム言語C++』に準拠するものとします。
+	\item プログラム中の文字は, サンプルにしたがって正しく判別するようにしなさい。\\
+		\begin{center}\begin{tabular}{|l|r|} \hline
+			数字の1 & \texttt{1} \\ \hline
+			大文字のI（アイ） & \texttt{I} \\ \hline
+			小文字のl（エル） & \texttt{l} \\ \hline
+			数字の0 & \texttt{0} \\ \hline
+			大文字のO（オー） & \texttt{O} \\ \hline
+			小文字のo（オー） & \texttt{o} \\ \hline
+		\end{tabular}\end{center}
+	\end{enumerate}
+\end{enumerate}
+\newpage
+\hfill 
+\newpage
+\hfill 
+\newpage
+
+\renewcommand{\labelenumi}{\textgt{第\theenumi 問}}
+\renewcommand{\theenumi}{\arabic{enumi}}
+\renewcommand{\labelenumii}{\textgt{問\theenumii}}
+\renewcommand{\theenumii}{\arabic{enumii}}
+\renewcommand{\labelenumiii}{\textgt{\egg{\theenumiii}}}
+\renewcommand{\theenumiii}{\arabic{enumiii}}
+
+\begin{BigSubjectName}\textgt{\kintou{6zw}{同人技術}}\end{BigSubjectName}
+
+\begin{center}\textgt{\kintou{11zw}{（全問必答）}}\end{center}
+\begin{enumerate}
+\item 次の文章を読み, 下の問いに答えよ。（配点 20）
+
+	　私たち同人開発者が活躍する場として, さまざまな同人誌即売会があるが, ここでは, その中でコミックマーケットについて考えてみよう。
+	コミックマーケットは1年に2回, 夏と冬に, その両方が\MarkedUnderline{\MARU{1}}{東京ビッグサイト}で行われる。ここ数年は夏, 冬とも\f{1}日間開催が一般的である。参加区分としては, サークル参加者, \f{2}, 
+	スタッフ参加者, 一般参加者の4つがあり, 開発者がサークルとして参加するとき, これはサークル参加者としての参加となる。
+	一般参加者というのは, 事前の登録等を必要とせず, 当日主に\MarkedUnderline{\MARU{2}}{作品の購入}をする来場者のことである。この中には, コミックマーケットの
+	\f{3}という理念を理解しない迷惑な振る舞いをしたり, 本来禁止である\MarkedUnderline{\MARU{3}}{徹夜}をして近隣住民に迷惑をかけたりという者もおり, 問題となっている。
+	スタッフ参加者は, コミックマーケット運営を行うボランティア参加者である。当日は列の整理等を行う。スタッフ参加をするには,
+	東京で行われる事前の\f{4}に複数回参加しなければならない。
+
+	　コミックマーケットでは, \MarkedUnderline{\MARU{4}}{ジャンルごとに開催日を区分}している。そのために「ジャンルコード」が規定されており, 例えば「デジタル（その他）」「同人ソフト」「東方Project」はいずれも2日目に行われるため, 同人ゲームや音楽, 映像作品を求める人はこの日に集まる傾向にある。このような細かい区分がなされているところからも, コミックマーケットの規模の大きさ, そして運営の苦労をうかがい知ることができる。
+
+	　このように, コミックマーケットはたくさんの参加者の力で作り上げられるものである。単にコミックマーケットを貸し店舗のように見るのではなく,
+	自らもイベント作りに参加し, また他の参加者の活動に感謝しつつ, 楽しんで参加するのが重要だといえるだろう。
+
+	\newpage
+
+	\begin{enumerate}
+	\item 文章中の\f{1}に入れるのに最も適当な数字を\egg{1}～\egg{9}のうちから一つ選べ。
+	\item 文章中の\f{2}・\f{3}・\f{4}に入れるのに最も適当なものを, 次のそれぞれの\egg{1}～\egg{4}のうちから一つずつ選べ。
+
+		\vspace{1.5zw}
+		\f{2}$\begin{cases}
+			\egg{1}招待参加者 & \egg{2}特別参加者 \\
+			\egg{3}企業参加者 & \egg{4}委託参加者 \\
+		\end{cases}$
+
+		\f{3}$\begin{cases}
+			\egg{1}お客様は「神様」です & \egg{2}「お客様」は存在しない \\
+			\egg{3}「神は死んだ」 & \egg{4}「サークルのための」コミケ \\
+		\end{cases}$
+
+		\f{4}$\begin{cases}
+			\egg{1}拡大準備集会 & \egg{2}大発会 \\
+			\egg{3}コミケ準備集会 & \egg{4}全体準備集会 \\
+		\end{cases}$
+
+	\item 下線部\MARU{1}に関連して, 東京ビッグサイトの所在地として適当な場所を, 次の地図の\egg{1}～\egg{5}のうちから一つ選べ。\f{5}
+
+		\includegraphics[width=8cm,clip]{rinkai.eps}
+	\item 下線部\MARU{2}に関連して, 作品を購入する際のマナーとして\textgt{適当でないもの}を, 次の\egg{1}～\egg{4}のうちから一つ選べ。\f{6}
+		\begin{enumerate}
+		\item 購入する際に, 周りがすいていたので, 作者に過去の作品の感想を伝えた。
+		\item 作者の荷物がかさばらないよう, コミケ終盤に購入するときに100円の商品を1000円札で買い, 900円のおつりをもらった。
+		\item 購入する際に作者に辛子明太子の差し入れをした。
+		\item 列の最後尾についたので, 最後尾札を持った。
+		\end{enumerate}
+	\newpage
+	\item 下線部\MARU{3}に関連して, 徹夜をしてはいけない理由として\textgt{適当でないもの}を, 次の\egg{1}～\egg{4}のうちから一つ選べ。 \f{7}
+		\begin{enumerate}
+		\item 夜の治安は必ずしも良くはなく, 盗難, 恐喝, 性犯罪等に巻き込まれる危険があるから。
+		\item 徹夜をするほどの参加者は, 極度に熱心な何かのファンであるため, 現実と空想の区別がつかなくなってしまう恐れがあるから。
+		\item 徹夜の長時間の野外活動は体力を消耗させ, コミケの苛酷な環境の下で具合を悪くし, 最悪救護のスタッフのお世話になってしまう恐れがあるから。
+		\item 徹夜組の存在で発生する警備活動に多大な費用, 労力がかかり, コミケの運営を難しくするから。
+		\end{enumerate}
+	\item 下線部\MARU{4}に関連して, C78において, 次のジャンルの組み合わせのうち, 全てのジャンルが同じ日に行われる\textgt{組み合わせでないもの}を, 次の\egg{1}～\egg{4}のうちから一つ選べ。 \f{8}
+		\begin{enumerate}
+		\item 「ガンダム」「スポーツ」「ゲーム（RPG）」
+		\item 「ギャルゲー」「鉄道・旅行・メカミリ」「特撮・SF・ファンタジー」
+		\item 「歴史」「創作」「Leaf\&Key」
+		\item 「FC（少年）」「FC（少女）」「FC（青年）」
+		\end{enumerate}
+
+	\end{enumerate}
+	\newpage
+	\hfill
+	\newpage
+	\item 次の説明を読んで, 下の問いに答えよ。（配点 20）
+
+		　コンピューターの性能が向上しつつある今においても, 高速化の重要性が失われたわけではない。ここでは, コンピューターに近づくための基本である, ビット演算についてみてみよう。今, アルファチャンネルを持った画像データの処理のコードを書いている。また, このアルファチャンネルは, 128以上が不透明, 128未満が透明という約束にしてあり, 色情報の上2バイトに格納してあるものとしよう。この状況で, unsigned int型の素子の色情報を引数に, その素子が不透明ならtrueを返すbool型関数isTransparentを作りたい。これを単純に書くと次のようになる。なお, この環境ではunsigned int型は32ビットの情報を保持できるものとする。
+
+		\begin{quote}
+			\verb"bool isTransparent(unsigned int color){" \\
+				\tab\verb"unsigned int alpha = (color & 0xff000000) >> "\f{9}\verb";" \\
+				\tab\verb"return alpha >= "\f{10}\verb";" \\
+			\verb"}"
+		\end{quote}
+
+		　しかしこれはまだ冗長である。一旦, このコードを次のように分解してみよう。
+
+		\begin{quote}
+			\verb"bool isTransparent(unsigned int color){" \\
+				\tab\verb"unsigned int a = color & 0xff000000" \\
+				\tab\verb"a >>= "\f{9} \\
+				\tab\verb"return a >= "\f{10}\verb";" \\
+			\verb"}"
+		\end{quote}
+
+		　ここで, 4行目の式の両辺に\f{9}ビットの左シフトをかけると,
+		
+		\begin{quote}
+			\verb"bool isTransparent(unsigned int color){" \\
+				\tab\verb"unsigned int a = color & 0xff000000" \\
+				\tab\verb"return a >= 0x"\f{11}\verb";" \\
+			\verb"}"
+		\end{quote}
+
+		　このようになる。さらに, 128以上255以下の数は, 2進法にすれば必ず\f{12}の桁が1になる。つまり, \f{12}の桁が1であることと, その数が128以上であることは同値である。これを利用して255以下の数が128以上であるかを判定するには, (判定する数)~\&~0x\f{13}を考えればよく, アルファチャンネルは\f{9}ビットシフトしたところにあるのだから, \f{13}を\f{9}ビット左シフトした, 0x\f{14}との論理積を取ればよい。したがって, 
+		\newpage
+		
+		\begin{quote}
+			\verb"bool isTransparent(unsigned int color){" \\
+				\tab\verb"return color & 0x"\f{14}\verb";" \\
+			\verb"}"
+		\end{quote}
+
+		　ここまでコードを簡略化することができた。
+
+		\begin{enumerate}
+			\item \f{9}・\f{10}・\f{11}・\f{12}・\f{13}・\f{14}に当てはまる数字として適当なものを, 次の選択肢の中からそれぞれ一つ選べ。
+				\begin{enumerate}
+				\item 6
+				\item 24
+				\item 40
+				\item 60
+				\item 64
+				\item 80
+				\item 128
+				\item 40000000
+				\item 60000000
+				\item[\egg{0}] 80000000
+				\end{enumerate}
+		\end{enumerate}
+	\newpage
+	\item 次の記事を読んで, 下の問いに答えよ。（配点 20）
+
+		\textbf{\large New OpenGL 4.0 aims to match DirectX 11}
+
+		Aiming to keep pace with Microsoft and advance the computing frontier, the group behind OpenGL has announced a new version of its interface designed to make advanced graphics easier for programmers to handle.
+
+		OpenGL 4.0 adds more support for \MarkedUnderline{\MARU{1}}{using a graphics processing unit (GPU) for other computing chores}\ and for tesselation, which subdivides a region on a graphics object into many smaller patches for more detailed imagery. The technology got its start as a graphics library at pioneering Silicon Graphics but has grown into a standard that works on many different computer systems and overseen by the Khronos Group.
+
+		"OpenGL 4.0 exposes the same level of capability of GPUs as DirectX 11," the competing interface from Microsoft, Khronos said in a presentation. The company announced the new standard, along with the 3.3 update to the earlier version, at the Game Developers Conference on Thursday.
+		
+		OpenGL 4.0 is compatible with a technology called OpenCL that's designed to let graphics chips handle many chores that otherwise would be the work of the main processor. Graphics chips aren't suited to all tasks, but they can help with some computationally intense work such as videogame physics. Graphics chips are steadily growing more powerful and widespread since modern operating systems, not just shoot-em-up videogames, now require 3D graphics abilities.
+
+		If you want to plunge into the details, here's how Khronos describes the new OpenGL 4.0 abilities:
+
+		\begin{itemize}
+		\item two new shader stages that enable the GPU to offload geometry \MarkedUnderline{\MARU{2}}{tessellation}\ from the CPU;
+		\item per-sample fragment shaders and programmable fragment shader input positions for increased rendering quality and anti-aliasing flexibility;
+		\item drawing of data generated by OpenGL, or external APIs such as OpenCL, without CPU intervention; 
+		\item shader subroutines for significantly increased programming flexibility;
+		\item separation of texture state and texture data through the addition of a new object type called sampler objects;
+		\item \MarkedUnderline{\MARU{3}}{64-bit double precision floating point}\ shader operations and inputs/outputs for increased rendering accuracy and quality;
+		\item performance improvements, including instanced geometry shaders, instanced arrays, and a new timer query.
+		\end{itemize}
+
+		OpenGL also has variations called OpenGL ES for mobile devices including Apple's iPhone and WebGL for Web browser applications. 
+
+		出典:\verb"DeepTech http://news.cnet.com/8301-30685_3-20000277-264.html"
+
+		\begin{enumerate}
+		\item 下線部\MARU{1}に関連して, このような技術のことを一般になんと言うか。適切なものを\egg{1}～\egg{4}から一つ選べ。\f{15}
+			\begin{enumerate}
+			\item GGPU
+			\item GNU
+			\item GNGPU
+			\item GPGPU
+			\end{enumerate}
+		\item 下線部\MARU{2}に関連して, テセレーションとは何かを説明したものとして適切なものを\egg{1}～\egg{4}から一つ選べ。\f{16}
+			\begin{enumerate}
+			\item よりきめ細かな画像を実現するためにグラフィックスオブジェクト上の領域を多数の小さな区画に分割する処理
+			\item より滑らかな映像を実現するために画面のバッファを複数用意する処理
+			\item よりきめ細かな画像を実現するために小さな画像を複数のコンピュータに演算を分散する処理
+			\item よりきめ細やかな画像を実現するためにグラフィックスオブジェクト上で情報の補完をする処理
+			\end{enumerate}
+		\item 下線部\MARU{3}に関連して, IEEE方式の倍精度浮動小数点数で2.5をあらわした2進数表示として適切なものを\egg{1}～\egg{4}から一つ選べ。\f{17}
+			\begin{enumerate}
+			\item 01000000001000000000000000000000
+			\item 11000000001000000000000000000000
+			\item 01000000000000000000000100000000
+			\item 11000000000000000000000100000000
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+\newpage
+\renewcommand{\labelenumi}{\textgt{\theenumi}}
+\renewcommand{\labelenumi}{\Roman{enumi}}
+\renewcommand{\labelenumii}{\arabic{enumii}}
+\renewcommand{\labelenumiii}{\textgt{\MARU{\theenumiii}}}
+\renewcommand{\labelenumiii}{\Roman{enumiii}}
+\begin{enumerate}
+\item[III] 参考文献
+	\begin{enumerate}
+	\item Wikipedia
+	\item コミックマーケット公式サイト(\verb"http://www.comiket.co.jp/")
+	\item 東京国際展示場(\verb"http://www.bigsight.jp/")
+	\item ゲームプログラマになる前に覚えておきたい技術
+	\item DeepTech(\verb"http://news.cnet.com/8301-30685_3-20000277-264.html")
+	\item ZENet Japan \\
+	\verb"http://builder.japan.zdnet.com/news/story/0,3800079086,20410291,00.htm"
+	\end{enumerate}
+\item[IV] SpecialThanks\\
+	Moneto氏(\verb"http://moneto.blogspot.com/")
+\end{enumerate}
+\end{document}
