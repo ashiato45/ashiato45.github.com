@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='utf_8'?>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>足跡45のサイト&gt;FLOW</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+
+
+  </head>
+
+  <body>
+<div id="fb-root" />
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+  <ul class="nav nav-list">
+    <li class="nav-header">ホームとか利用サービス</li>
+    <li><a href="./index.html">ホーム</a></li>
+    <li><a href="http://www.twitter.com/ashiato45">Twitter</a></li>
+    <li><a href="https://github.com/">GitHub</a></li>
+    <li><a href="http://book.akahoshitakuya.com/">読書メーター</a></li>
+    <li><a href="http://ashiato45.hatenablog.jp/">ブログ</a></li>
+    <li><a href="http://d.hatena.ne.jp/sle/">旧ブログ</a></li>
+    <li class="nav-header">ブラウザ上で遊べるゲーム</li>
+    <li class="active"><a href="./flow.html">FLOW</a></li>
+    <li class="nav-header">ソフトウェア</li>
+    <li><a href="./orihalconb.html">Orihalconb</a></li>
+    <li><a href="./molybdenum.html">森武伝</a></li>
+    <li><a href="./mpb.html">Math + Bullet</a></li>
+    <li><a href="./ski.html">スキースイカ割り</a></li>
+    <li><a href="./timebroken.html">時間に壊されるゲーム(仮称)</a></li>
+    <li><a href="./hellwalk.html">散歩D版</a></li>
+    <li class="nav-header">数学</li>
+    <li><a href="./postmodern_analysis.html">ポストモダン解析学</a></li>
+    <li class="nav-header">その他</li>
+    <li><a href="./aprilfool2010.html">エイプリルフール2010</a></li>
+  </ul>
+</div>
+        </div>
+        <div class="span9">
+          <div class="hero-unit">
+  <h1>FLOW</h1>
+  <p>2人用機雷設置海流艦戦ゲーム。</p>
+  <p>オンラインの方は対戦相手との接続があ
+  るので接続の説明を読んでください。</p>
+    <p><a class="btn btn-primary btn-large" href="flow/flow_20130811/index.html">オフライン版で遊ぶ</a><a class="btn btn-primary btn-large" href="flow/flow_online_20130812/online.html">オンライン版で遊ぶ</a></p>
+</div>
+
+<div class="row-fluid">
+  <div class="span6">
+    <h2>これは何？</h2>
+    <p>C84でUTMCから頒布したjs製対戦ゲームです。面倒な手続なしでのオンライン対戦に対応しています。いろいろ直すべきところはありますが当分やらないのでとりあえず公開します。</p>
+  </div>
+  <div class="span6">
+    <h2>動作環境</h2>
+    <p>Google Chrome以外では<strong>正常に動作しません</strong>。これ
+  はGoogle Chrome以外のブラウザではタイマの扱いがでたらめで、フレーム
+  レートが安定しないことが原因です。PCの性能如何の問題ではありません。</p>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h2>まじめなルール</h2>
+    <p>あんまり真面目に読まなくてもやれば分かると思います。</p>
+    <p>機雷を設置して相手にぶつければ勝利です。ぶつけられると負けです。STGのような残機はなく、一度当たればそれで勝敗が決まります。自分の設置した機雷も自分にぶつかりますので、自爆しないように気をつけてください。</p>
+    <p>ステージは上下左右つながっていますので、画面端に行くと反対側から出てきます。画面際だと爆弾や敵艦が見づらいので気をつけてください。</p>
+    <p>画面上には海流があり、短い線分で示されています。船は海流の影響を受け、その方向に流れていきます。舵を切ることで多少船の向きを変えることはできますが、あまり急激に向きを変えたり流れに逆らったりすることはできないので、うまく利用して攻めたり逃げたりしてください。また、機雷も海流の影響を受け、こちらは海流に乗ってそのまま流れていきます。操作することはできません。</p>
+    <p>ちなみに、海流は遊ぶ度変わります。</p>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h2>オフライン版</h2>
+    <p>キーボードの左側と右側に分かれて、一台のPCで対戦します。</p>
+    <p>キー操作はゲームのページにも書いてありますので、覚える必要はあ
+  りません。
+    </p>
+    <p>
+          <table><tbody>
+      <tr>
+        <td />
+        <td>左に舵を切る</td>
+        <td>右に舵を切る</td>
+        <td>発射方向を変える</td>
+        <td>機雷を発射</td>
+      </tr>
+      <tr>
+        <td>1P(赤)</td>
+        <td>←</td>
+        <td>→</td>
+        <td>↑</td>
+        <td>↓</td>
+      </tr>
+      <tr>
+        <td>2P(青)</td>
+        <td>A</td>
+        <td>D</td>
+        <td>W</td>
+        <td>S</td>
+      </tr>
+    </tbody></table>
+    </p>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h2>オンライン版(接続の説明)</h2>
+    <p>対戦相手と接続用の名前を交換して相手とのP2P接続を作ります。ポート
+  を開ける等の操作は必要ありません。</p>
+    <p>
+      <ol>
+        <li>ゲームのページに入ると「自分の名前」のところに接続用の名前
+  が表示されます(表示された名前を使ってください。<strong>あなたの決
+  めた名前を使用することはできません。</strong>)。その名前をSkypeやメー
+  ルなどで同じくゲームのページを開いている相手に送ってください。</li>
+        <li>相手から教わった名前を「相手の名前」のところに入力してくだ
+  さい。</li>
+        <li>ゲーム画面をクリックしてください。(キーボードに反応させる
+  ためにフォーカスを合わせます。)</li>
+        <li>スペースを押すと通信がはじまり、「0」がしばらく表示された
+  あと<strong>突然</strong>ゲームがはじまります。</li>
+        <li>自分の操作する船は赤になります。(相手からはあなたの船が青
+  に見えます。)がんばってください。</li>
+      </ol>
+    </p>
+    <p>キー操作はゲームのページにも書いてありますので、覚える必要はあ
+  りません。
+    </p>
+    <p>
+          <table><tbody>
+      <tr>
+        <td />
+        <td>左に舵を切る</td>
+        <td>右に舵を切る</td>
+        <td>発射方向を変える</td>
+        <td>機雷を発射</td>
+      </tr>
+      <tr>
+        <td>あなた</td>
+        <td>←</td>
+        <td>→</td>
+        <td>↑</td>
+        <td>↓</td>
+      </tr>
+    </tbody></table>
+    </p>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span6">
+    <h2>ライセンス</h2>
+    <p>Apache Licenseである<a href="http://excanvas.sourceforge.net">excanvas</a>を利用させていた
+  だいています。</p>
+    <p>オンライン版は通信に<a href="http://peerjs.com/">PeerJS</a>を利
+  用させていただいています。また、P2P通信のためのサーバーには<a href="http://peerjs.com/peerserver">PeerServer Cloud service</a>の
+  Free版を利用させていただいています。</p>
+  </div>
+  <div class="span6">
+    <h2>TODO</h2>
+    <p>
+      <ul>
+        <li>清書(ソース汚くて恥ずかしいので見ないでおいてください。)</li>
+        <li>オンライン版カウントダウンを作る</li>
+        <li>名前交換が面倒なので適当にサーバーを用意してクリックで対戦
+  相手選択ができるようにしたい。</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <hr />
+
+      <footer>
+	<p>   
+
+
+	 <a class="twitter-share-button" data-lang="en" href="https://twitter.com/share">Tweet</a>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<div class="fb-like" data-href="http://ashiato45.github.com/" data-send="true" data-show-faces="true" data-width="450" />
+
+
+<div class="g-plusone" data-annotation="inline" data-width="300" />
+
+
+<script type="text/javascript">
+  window.___gcfg = {lang: 'ja'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-title="足跡45のサイト" href="http://b.hatena.ne.jp/entry/http://ashiato45.github.com/" title="このエントリーをはてなブックマークに追加"><img alt="このエントリーをはてなブックマークに追加" height="20" src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" style="border: none;" width="20" /></a><script async="async" charset="utf-8" src="http://b.st-hatena.com/js/bookmark_button.js" type="text/javascript" />
+
+	</p>
+        <p>(c)ashiato45 2013 All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    
+    
+    <script src="js/jquery.js" />
+    <script src="js/bootstrap-transition.js" />
+    <script src="js/bootstrap-alert.js" />
+    <script src="js/bootstrap-modal.js" />
+    <script src="js/bootstrap-dropdown.js" />
+    <script src="js/bootstrap-scrollspy.js" />
+    <script src="js/bootstrap-tab.js" />
+    <script src="js/bootstrap-tooltip.js" />
+    <script src="js/bootstrap-popover.js" />
+    <script src="js/bootstrap-button.js" />
+    <script src="js/bootstrap-collapse.js" />
+    <script src="js/bootstrap-carousel.js" />
+    <script src="js/bootstrap-typeahead.js" />
+
+  </body>
+</html>

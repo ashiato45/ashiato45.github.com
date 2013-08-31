@@ -49,4 +49,4 @@ for cfile in glob.glob("contents/*.html"):
             print "yes"
             li.attrib["class"] = "active"
 
-    tree.write(os.path.join("main", os.path.basename(cfile)), "utf_8")
+    tree.write(os.path.join("../", os.path.basename(cfile)), "utf_8")
