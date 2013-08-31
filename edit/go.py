@@ -2,6 +2,7 @@ import glob
 import os.path
 import codecs
 import xml.etree.ElementTree as ET
+import urllib
 
 def open_read(f_):
     f = codecs.open(f_, "r", "shift_jis")
@@ -29,8 +30,15 @@ for cfile in glob.glob("contents/*.html"):
     content = open_read(cfile)
     page = template.replace("%CONTENT%", content)
     page = page.replace("%SIDEBAR%", ET.tostring(sidedoc))
+    address = "http://ashiato45.github.io/"
     page = page.replace("%HOME%", ".")
-    
+    if "index.html" in cfile:
+        page = page.replace("%CURRENT%", address)
+        page = page.replace("%CURRENT_FACEBOOK%", urllib.quote(address, ""))
+    else:
+        page = page.replace("%CURRENT%", address + os.path.basename(cfile))
+        page = page.replace("%CURRENT_FACEBOOK%", urllib.quote(address + os.path.basename(cfile), ""))
+
     lineprint(page.encode("utf_8"))
 
     doc = ET.fromstring(page.encode("utf_8"))
