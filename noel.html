@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='utf_8'?>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>足跡45のサイト&gt;Buche de Noel刈り</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+
+
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+
+
+  </head>
+
+  <body>
+<div id="fb-root" />
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+  <ul class="nav nav-list">
+    <li class="nav-header">ホームとか利用サービス</li>
+    <li><a href="./index.html">ホーム</a></li>
+    <li><a href="http://www.twitter.com/ashiato45">Twitter</a></li>
+    <li><a href="https://github.com/">GitHub</a></li>
+    <li><a href="http://book.akahoshitakuya.com/">読書メーター</a></li>
+    <li><a href="http://ashiato45.hatenablog.jp/">ブログ</a></li>
+    <li><a href="http://d.hatena.ne.jp/sle/">旧ブログ</a></li>
+    <li class="nav-header">ブラウザ上で遊べるゲーム</li>
+    <li><a href="./flow.html">FLOW</a></li>
+    <li class="active"><a href="./noel.html">Buche de Noel刈り</a></li>    
+    <li class="nav-header">ソフトウェア</li>
+    <li><a href="./orihalconb.html">Orihalconb</a></li>
+    <li><a href="./molybdenum.html">森武伝</a></li>
+    <li><a href="./mpb.html">Math + Bullet</a></li>
+    <li><a href="./ski.html">スキースイカ割り</a></li>
+    <li><a href="./timebroken.html">時間に壊されるゲーム(仮称)</a></li>
+    <li><a href="./hellwalk.html">散歩D版</a></li>
+    <li class="nav-header">数学</li>
+    <li><a href="./postmodern_analysis.html">ポストモダン解析学</a></li>
+    <li class="nav-header">その他</li>
+    <li><a href="./aprilfool2010.html">エイプリルフール2010</a></li>
+  </ul>
+</div>
+        </div>
+        <div class="span9">
+          <div class="hero-unit">
+  <h1>Buche de Noel刈り</h1>
+  <p>ブッシュ・ド・ノエルを刈る陣取りアクション</p>
+    <p><a class="btn btn-primary btn-large" href="noel/10hgj_revised/index.html">遊ぶ</a> </p>
+</div>
+
+<div class="row-fluid">
+  <div class="span6">
+    <h2>これは何？</h2>
+    <p><a href="http://10hoursgamejam.hateblo.jp/">第1回 10時間Game Jam</a>で作った、陣取りアクションです。ちょっとルールが難しいかも。</p>
+  </div>
+  <div class="span6">
+    <h2>動作環境</h2>
+    <p>最新のGoogle ChromeかFirefoxで動きます。</p>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h2>ルール</h2>
+    <div class="row-fluid">
+      <div class="span12">
+        <h3>勝利条件</h3>
+        <p>赤と青の2人で、1分以内にフィールドに生えてくるブッシュ・ド・ノエルの木を上手に利用して相手より<strong>長い一本の</strong>ブッシュ・ド・ノエルを作るのが勝利条件です。</p>
+      </div>
+    </div>
+    <div class="row-fluid">    
+      <div class="span12">
+        <h3>ブッシュ・ド・ノエルの木</h3>
+        <p>はじまってしばらくすると、フィールド上にランダムにブッシュ・ド・ノエル(以下ブッシュ)の木が生えてきます。ブッシュの木は放っておくとどんどん成長して高くなっていき、その高さはブッシュの木に数字として表示されます。</p>
+    <p><img src="images/noel_desc_1.png" />左は高さ1のブッシュの木、右は2のブッシュの木</p>
+    <p>ブッシュの木を切り倒すと、その高さのブッシュの木と同じ長さの<strong>自分の</strong>ブッシュができます。</p>
+    <p><img src="images/noel_desc_2.png" />→<img src="images/noel_desc_3.png" />高さ3のブッシュの木を切り倒すと、長さ3のブッシュができる。</p>
+    <p>操作方法のところで後述しますが、切り倒すのは「方向キーを押しながら伐採キー」です。注意してください。</p>
+      </div>
+    </div>
+    <div class="row-fluid">        
+      <div class="span12">
+        <h3>ブッシュ・ド・ノエルの長さ</h3>
+        <p>このゲームは相手より長いブッシュを作るのが目的ですが、ここでブッシュの長さの数えかたは、「一本の」最長のブッシュとなります。言い換えると、「連続したブッシュの連なりのうち、一番長く一筆書きできた長さ」ということになります。例えば、</p>
+        <p><img src="images/noel_desc_4.png" />長さ6のブッシュ</p>
+        <p>これは、途中で折れまがった一本のブッシュで、長さは数えていくと6となります。</p>
+        <p><img src="images/noel_desc_5.png" />長さ4のブッシュ</p>
+        <p>これは、一見すると6つのブッシュが連なっているので6にも見えますが、「一本の」ブッシュのうち一番長いものを探そうとすると、図に3本のピンクの線で示したように長さ「4」となります。数えかたは今回のように複数あるかもしれませんが、そのうち「一番長い一本」だけが重要になります。</p>
+        <p><img src="images/noel_desc_6.png" />赤のブッシュは長さ9、青のブッシュは長さ8</p>
+        <p>この状況であれば、赤が作ったブッシュの列のうち一番長い一本は図のピンクの線となり、長さ9となります。青のブッシュの列のうち一番長い一本は図の水色の線となり、長さ8となります。よって、このまま1分になってゲームが終了すると、より長いブッシュを作った赤の勝ちとなります。</p>
+      </div>
+    </div>
+    <div class="row-fluid">        
+      <div class="span12">
+        <h3>ブッシュ・ド・ノエルの上書き</h3>
+        <p>相手のブッシュに被さるようにブッシュの木を切り倒すと、その部分にある相手のブッシュを消して、自分のブッシュに置き換えることができます。これを使って、相手のブッシュの連なりを分断することができます。上手に使いましょう。</p>
+        <p><img src="images/noel_desc_7.png" />→<img src="images/noel_desc_8.png" />青がブッシュの木を倒して上書きした</p>
+        <p>例えば、この図でははじめは赤が長さ5のブッシュを持っているのですが、青が高さ3のブッシュの木を倒して上書きすることによって、青は長さ3のブッシュを得た上に赤のブッシュの長さは3になりました。</p>
+      </div>
+    </div>        
+    <div class="row-fluid">        
+      <div class="span12">
+        <h3>ブッシュ・ド・ノエルの破壊</h3>
+        <p>自分の動ける範囲を増やしたりするために、<strong>自分の</strong>ブッシュは、木を切り倒すのと同じ操作(方向キーを押しながら伐採キー)で破壊することができます。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h2>操作方法</h2>
+    <p>キーボードの左側と右側に分かれて、一台のPCで対戦します。</p>
+    <p>キー操作はゲームのページにも書いてありますので、覚える必要はあ
+  りません。
+    </p>
+    <p>
+      <table border="1"><tbody>
+        <tr>
+          <td>操作</td>
+          <td>左に移動</td>
+          <td>右に移動</td>
+          <td>上に移動</td>
+          <td>下に移動</td>
+          <td>伐採・自分のブッシュを破壊</td>        
+        </tr>
+        <tr>
+          <td>1P(赤)</td>
+          <td>←</td>
+          <td>→</td>
+          <td>↑</td>
+          <td>↓</td>
+          <td>方向(←→↑↓) + スペース</td>
+        </tr>
+        <tr>
+          <td>2P(青)</td>
+          <td>A</td>
+          <td>D</td>
+          <td>W</td>
+          <td>S</td>
+          <td>方向(ADWS) + Q</td>
+        </tr>
+      </tbody></table>
+    リセットはF8、Enterで画面サイズに合わせる。
+    </p>
+  </div>
+</div>
+
+
+<div class="row-fluid">
+  <div class="span12">
+    <h2>TODO</h2>
+    <p>
+      <ul>
+        <li>清書(ソース汚くて恥ずかしいので見ないでおいてください。)</li>
+        <li>オンライン版を作る</li>
+        <li>絵をなんとかしたい</li>
+        <li>リザルトの最長ブッシュの表示を見易くしたい</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <hr />
+
+      <footer>
+
+
+
+
+        <p>(c)ashiato45 2013 All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    
+    
+    <script src="js/jquery.js" />
+    <script src="js/bootstrap-transition.js" />
+    <script src="js/bootstrap-alert.js" />
+    <script src="js/bootstrap-modal.js" />
+    <script src="js/bootstrap-dropdown.js" />
+    <script src="js/bootstrap-scrollspy.js" />
+    <script src="js/bootstrap-tab.js" />
+    <script src="js/bootstrap-tooltip.js" />
+    <script src="js/bootstrap-popover.js" />
+    <script src="js/bootstrap-button.js" />
+    <script src="js/bootstrap-collapse.js" />
+    <script src="js/bootstrap-carousel.js" />
+    <script src="js/bootstrap-typeahead.js" />
+
+  </body>
+</html>

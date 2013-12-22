@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <title>Bûche de Noël刈り</title>
+    <!--[if IE]><script type="text/javascript" src="excanvas_r3/excanvas.js"></script><![endif]-->
+    <script type="text/javascript" src="image.js"></script>
+    <script type="text/javascript" src="sprites.js"></script>
+    <script type="text/javascript" src="keyboard.js"></script>
+    <script type="text/javascript" src="result.js"></script>    
+    <script type="text/javascript" src="map.js"></script>    
+    <script type="text/javascript" src="main.js"></script>
+</script>
+  </head>
+  <body>
+    <h1>Bûche de Noël刈り</h1>
+    <div align="center" id="contents">
+      <canvas id="canvasMain" width="640" height="480" onload="draw()"></canvas>
+    </div>
+    <div>
+      <button onclick="make_fullscreen()">Fullscreen</button>
+    </div>
+    <div>
+      説明：フィールドにブッシュ・ド・ノエル(以下ブッシュ)が生えてきて、どん
+どん成長していきます。成長度は、木の上の紫の数字で示されます。木
+を切り倒すと、木の成長度分の長さのブッシュが作れます。相手のブッシュの
+上にブッシュを作ると、相手のブッシュを潰すことができます。1分の間によ
+り長い<strong>一本の</strong>ブッシュを作ったほうが勝ちです。
+    </div>
+    <table><tbody>
+      <tr>
+        <td>操作</td>
+        <td>左に移動</td>
+        <td>右に移動</td>
+        <td>上に移動</td>
+        <td>下に移動</td>
+        <td>伐採・自分のブッシュを破壊</td>        
+      </tr>
+      <tr>
+        <td>1P(赤)</td>
+        <td>←</td>
+        <td>→</td>
+        <td>↑</td>
+        <td>↓</td>
+        <td>方向(←→↑↓) + スペース
+      </tr>
+      <tr>
+        <td>2P(青)</td>
+        <td>A</td>
+        <td>D</td>
+        <td>W</td>
+        <td>S</td>
+        <td>方向(ADWS) + Q
+      </tr>
+    </tbody></table>
+    リセットはF8、Enterで画面サイズに合わせる。
+  </body>
+</html>
