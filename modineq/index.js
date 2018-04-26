@@ -6,6 +6,9 @@ var size = 500;
 function getPos(sp, x_, y_) {
     return { x: leftm + sp * x_, y: size + topm - sp * y_ };
 }
+function mod(a, b) {
+    return ((a % b) + b) % b;
+}
 function draw() {
     if (ctx == null)
         return;
@@ -30,7 +33,7 @@ function draw() {
     }
     for (var i = 0; i < m; i++) {
         for (var j = 0; j < m; j++) {
-            if ((a * i + b * j) % m <= c % m) {
+            if (mod(a * i + b * j, m) <= mod(c, m)) {
                 ctx.beginPath();
                 var p = getPos(sp, i, j);
                 ctx.arc(p.x, p.y, sp / 3, 0, 2 * Math.PI, false);
