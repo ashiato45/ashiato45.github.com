@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<script src="index.js"></script>
-</head>
-<body>
-  <canvas id="cnvs" height="720" width="720"></canvas>
-  <div>
-    <input id="txtA" value="1"></input>x
-    + <input id="txtB" value="2"></input>y
-    &lt;= <input id="txtC" value="3"></input> mod
-    <input id="txtM" value="8"></input>
-  </div>
-  <div>
-    <input type="button" id="btnGo" value="Go"></input>
-  </div>
-</body>
+<html>
+  <body>
+    <h1>Redundant Space Remover</h1>
+    <div>
+A tool to remove redundant spaces and hyphens at line breaks.      
+    </div>
+    <div>
+      <textarea id="txaInput" rows="10" cols="80">
+             The   quick brown fox ju-
+mps over the 
+lazy dog.   
+      </textarea>
+    </div>
+    <div>
+      <input type="button" id="btnGo" onClick='go();' value="Go"></input>
+    </div>
+    <div>
+      <textarea id="txaOutput" rows="10" cols="80"></textarea>
+    </div>
+    <script src="cutblank.js"></script>
+    
+  </body>
 </html>
