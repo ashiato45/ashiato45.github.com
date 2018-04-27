@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="index.js"></script>
+
 </head>
 <body>
   <canvas id="cnvs" height="720" width="720"></canvas>
   <div>
-    <input id="txtA" value="1"></input>x
-    + <input id="txtB" value="2"></input>y
-    + <input id="txtE" value="0"></input>
-    &lt;= <input id="txtC" value="3"></input> mod
-    <input id="txtM" value="8"></input>
+    <textarea id="txaInput" rows="10" cols="80">
+((1*x <= 2*y) | (1*x <= 3))
+    </textarea>
   </div>
+  <div>
+    mod <input id="txtM" value="8"></input>
+  </div>
+  <!-- <div> -->
+  <!--   <input type="radio" id="radBV" -->
+  <!--    name="mode" value="bv"> -->
+  <!--   <label for="radBV">BitVector</label> -->
+  <!--   <input type="radio" id="radLIA" -->
+  <!--    name="mode" value="lia"> -->
+  <!--   <label for="radLIA">LIA</label> -->
+  <!-- </div> -->
   <div>
     <input type="button" id="btnGo" value="Go"></input>
   </div>
-    <input id="txtD" value="0"></input>
-    &lt;=
+  <div>
+    <textarea id="txaOutput" rows="10" cols="80">
+    </textarea>
+  </div>
+  <div>
+    <ul>
+      <li>Things jointed by "|" must be parenthesized.</li>
+      <li>"x" have to be written "1*x".</li>
+    </ul>
+  </div>
+  
+<script src="bundle.js"></script>
+  <!-- <div> -->
+  <!--   <input id="txtA" value="1"></input>x -->
+  <!--   + <input id="txtB" value="2"></input>y -->
+  <!--   + <input id="txtE" value="0"></input> -->
+  <!--   &lt;= <input id="txtC" value="3"></input> mod -->
+  <!--   <input id="txtM" value="8"></input> -->
+  <!-- </div> -->
+  <!-- <div> -->
+  <!--   <input type="button" id="btnGo" value="Go"></input> -->
+  <!-- </div> -->
+  <!--   <input id="txtD" value="0"></input> -->
+  <!--   &lt;= -->
   
 </body>
 </html>
