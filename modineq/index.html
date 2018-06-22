@@ -7,7 +7,7 @@
   <canvas id="cnvs" height="720" width="720"></canvas>
   <div>
     <textarea id="txaInput" rows="10" cols="80">
-((1*x <= 2*y) | (1*x <= 3))
+([(1*x <= 8) | (1*y <= 8)]&(1*x+1*y-8 <= 7) )      
     </textarea>
   </div>
   <div>
@@ -30,7 +30,8 @@
   </div>
   <div>
     <ul>
-      <li>Things jointed by "|" must be parenthesized.</li>
+      <li>Things jointed by "&" must be parenthesized.</li>
+      <li>Things jointed by "|" must be in a bracket.</li>
       <li>"x" have to be written "1*x".</li>
     </ul>
   </div>
