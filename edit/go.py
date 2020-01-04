@@ -17,31 +17,32 @@ template = open_read("./template/template.html")
 def lineprint(s):
     sp = s.split("\n")
     for i in range(len(sp)):
-        print i+1, sp[i]
+        print(i+1, sp[i])
 
 for cfile in glob.glob("contents/*.html"):
+    # print(sidebar)
     sidedoc = ET.fromstring(sidebar.encode("utf_8"))
     for a in sidedoc.iter("a"):
         if os.path.basename(cfile) in a.attrib["href"]:
             titlename = a.text
             break
 
-    print cfile
+    print(cfile)
     content = open_read(cfile)
     page = template.replace("%CONTENT%", content)
-    page = page.replace("%SIDEBAR%", ET.tostring(sidedoc))
+    page = page.replace("%SIDEBAR%", ET.tostring(sidedoc).decode())
     address = "http://ashiato45.github.io/"
     page = page.replace("%HOME%", ".")
     if "index.html" in cfile:
         page = page.replace("%CURRENT%", address)
-        page = page.replace("%CURRENT_FACEBOOK%", urllib.quote(address, ""))
+        # page = page.replace("%CURRENT_FACEBOOK%", urllib.quote(address, ""))
     else:
         page = page.replace("%CURRENT%", address + os.path.basename(cfile))
-        page = page.replace("%CURRENT_FACEBOOK%", urllib.quote(address + os.path.basename(cfile), ""))
+        # page = page.replace("%CURRENT_FACEBOOK%", urllib.quote(address + os.path.basename(cfile), ""))
 
-    lineprint(page.encode("utf_8"))
+    lineprint(page)
 
-    doc = ET.fromstring(page.encode("utf_8"))
+    doc = ET.fromstring(page)
     tree = ET.ElementTree()
     tree._setroot(doc)
 
@@ -52,9 +53,9 @@ for cfile in glob.glob("contents/*.html"):
 
     for li in tree.iterfind("body/div/div/div/div/ul/li"):
         inli = [x for x in li.iterfind("a")]
-        print inli
+        print(inli)
         if inli != [] and os.path.basename(cfile) in inli[0].attrib["href"]:
-            print "yes"
+            print("yes")
             li.attrib["class"] = "active"
 
     tree.write(os.path.join("../", os.path.basename(cfile)), "utf_8")
