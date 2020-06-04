@@ -1,4 +1,5 @@
-var apikey = "bddadvcmextxd2t9";
+// var apikey = "bddadvcmextxd2t9";
+var apikey = undefined;
 var peer;
 var conn;
 var receipt;
