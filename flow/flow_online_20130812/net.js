@@ -38,7 +38,7 @@ function init_connection(){
     foebombs = new Array();
     perlinsent = false;
     
-    peer = new Peer({key: apikey, debug:true});
+    peer = new Peer();
     
     peer.on("open", function(id){
 	console.log(id);
