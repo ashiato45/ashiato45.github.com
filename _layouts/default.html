@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'ja' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+      body { padding-top: 40px; padding-bottom: 40px; }
+      .sidebar-nav { padding: 9px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <aside class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              {% for group in site.data.navigation %}
+                <li class="nav-header">{{ group.heading }}</li>
+                {% for item in group.links %}
+                  <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+              {% endfor %}
+            </ul>
+          </div>
+        </aside>
+        <main class="span9">
+          {{ content }}
+        </main>
+      </div>
+      <hr>
+      <footer><p>(c) ashiato45 2013 All rights reserved.</p></footer>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap-transition.js"></script>
+    <script src="/js/bootstrap-alert.js"></script>
+    <script src="/js/bootstrap-modal.js"></script>
+    <script src="/js/bootstrap-dropdown.js"></script>
+    <script src="/js/bootstrap-scrollspy.js"></script>
+    <script src="/js/bootstrap-tab.js"></script>
+    <script src="/js/bootstrap-tooltip.js"></script>
+    <script src="/js/bootstrap-popover.js"></script>
+    <script src="/js/bootstrap-button.js"></script>
+    <script src="/js/bootstrap-collapse.js"></script>
+    <script src="/js/bootstrap-carousel.js"></script>
+    <script src="/js/bootstrap-typeahead.js"></script>
+  </body>
+</html>

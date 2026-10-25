@@ -1,0 +1,10 @@
+title: 足跡45のサイト
+lang: ja
+markdown: kramdown
+permalink: pretty
+exclude:
+  - edit/
+  - README.md
+  - readme.md
+  - Gemfile
+  - Gemfile.lock
