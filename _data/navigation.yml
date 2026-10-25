@@ -2,6 +2,8 @@
   links:
     - title: ホーム
       url: /
+    - title: Pleroma投稿アーカイブ
+      url: /pleroma_log/
     - title: Twitter
       url: https://www.twitter.com/ashiato45
     - title: GitHub
