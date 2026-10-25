@@ -2,7 +2,11 @@
   links:
     - title: ホーム
       url: /
-    - title: Pleroma投稿アーカイブ
+    - title: Misskey
+      url: https://misskey.io/@ashiato45
+    - title: ブログ
+      url: http://ashiato45.hatenablog.jp/
+    - title: 自鯖Pleromaアーカイブ
       url: /pleroma_log/
     - title: Twitter
       url: https://www.twitter.com/ashiato45
@@ -10,8 +14,7 @@
       url: https://github.com/ashiato45
     - title: 読書メーター
       url: http://bookmeter.com/u/352202
-    - title: ブログ
-      url: http://ashiato45.hatenablog.jp/
+
     - title: 旧ブログ
       url: http://d.hatena.ne.jp/sle/
 - heading: ブラウザ上で遊べるゲーム
